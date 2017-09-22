@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+}
+
+.pre {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 200px;
+    top: 10px;
+    z-index: 1;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.next {
+    display: inline;
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    margin: -205px 0 0 0;
+    height: 200px;
+    float: right;
+    opacity: 0.5;
+}
+
+.container {
+    display: block;
+    margin: 10px 40px;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid black;
+    background: lightgray;
+}
+
+.pic-current {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.pic {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.indexlabel li {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    left: 20%;
+    background: lightgreen;
+    border-radius: 50%;
+    padding: 0px 4px;
+}
+
+li.li-current {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    left: 20%;
+    background: darkgreen;
+    border-radius: 50%;
+    padding: 0px 4px;
+}
+
+.indexlabel {
+    /*background: green;*/
+    margin: -35px 0 0 0;
+    position: absolute;
+    left: 100px
+}
