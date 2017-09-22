@@ -1,0 +1,905 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.headDirection {
+    position: relative;
+    background:rgb(60,60,60);
+    margin: 0;
+    color: gray;
+    height: 40px;
+    width: 750px;
+    left: 30px;
+    top: 0;
+}
+.head_line {
+    background:rgb(60,60,60);
+}
+.headDirection li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    margin-left: 10px;
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.headDirection li:hover{
+    color: white;
+}
+
+.vertival-center {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.accountPart {
+    width: 250px;
+    float: right;
+    color: gray;
+    height: 40px;
+    display: block;
+    margin: -40px 120px 0 0;
+}
+
+.accountPartLi {
+    font-size: 14px;
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid gray;
+    list-style: none;
+    padding: 0 10px 0 10px;
+}
+
+.accountPartLi:hover{
+    color: white;
+    cursor: pointer;
+}
+/*顶层导航栏*/
+.nav-top {
+    font-size: 0px;
+    line-height: 100px;
+    width: 1400px;
+    height: 100px;
+    background: white;
+    position: relative;
+}
+.nav-top-center {
+    position: relative;
+    height: 100px;
+    left: 260px;
+    width: 1100px;
+    display: block;
+}
+.nav-top-center-li {
+    font-size: 16px;
+    float: left;
+    position: relative;
+    top: 50%;
+    list-style: none;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.nav-top img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+/*顶层导航栏弹出部分*/
+.top-nav-show{
+    width: 1350px;
+    height: 260px;
+    position: absolute;
+    background: white;
+    z-index: 10;
+    display: none;
+    left: -260px;
+    top: 100px;
+    border-top: 1px solid gray;
+}
+.nav-top-current{
+    display: block;
+}
+.des{
+    font-size: 15px;
+    height: 10px;
+    position: relative;
+    top: 112px;
+    left: 90px;
+}
+.price{
+    font-size: 15px;
+    position: relative;
+    color: red;
+    top: 135px;
+    left: 90px;
+}
+.top-show-li{
+    margin-top: 20px;
+        width: 200px;
+        border-right: 1px solid gray;
+        position: relative;
+        left: 35px;
+        height: 140px;
+        float: left;
+}
+.top-show-pro{
+    background: red;
+    position: relative;
+    top: 136px;
+    height: 30px;
+}
+
+/*顶层导航栏 搜索栏*/
+.labelforSearch {
+    height: 100px;
+    width: 300px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 80px;
+}
+.labelbutton {
+    font-size: 17px;
+    height: 52px;
+    width: 50px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}
+/*顶层导航栏输入框*/
+.inputcontent {
+    position: absolute;
+    list-style: none;
+    top: 25px;
+    width: 245px;
+    height: 46px;
+}
+
+
+/*左边导航栏*/
+
+.left-nav {
+    width: 234px;
+    height: 425px;
+    position: relative;
+    left: 30px;
+    top: 20px;
+    padding: 20px 0;
+    background: #3C3C3C;
+}
+
+
+/*左边导航栏的内容*/
+
+.left-nav-li {
+    cursor: pointer;
+    font-size: 14px;
+    width: 83%;
+    /*width: 194px;*/
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background: #3C3C3C;
+    list-style: none;
+    color: white;
+
+}
+
+.left-nav-span {
+    color: gray;
+    height: 40px;
+    float: right;
+    font-size: 15px;
+}
+
+
+/*左侧导航栏弹出内容*/
+
+.leftnav-show {
+    cursor: default;
+    background: white;
+    width: 630px;
+    height: 443px;
+    padding: 0;
+    position: absolute;
+    left: 234px;
+    top: -20px;
+    z-index: 1;
+    padding-top: 20px;
+    display: none;
+}
+
+.leftnav-show-li {
+    font-size: 12px;
+    list-style: none;
+    z-index: 1;
+    width: 275px;
+    padding: 0 20px;
+    height: 40px;
+    float: left;
+    left: 234px;
+    top: -20px;
+    margin: 10px 0 25px 0;
+}
+
+
+/* 左侧弹出窗口 物品的图片*/
+
+.leftnav-show-li img {
+    line-height: 40px;
+
+}
+
+
+/* 左侧弹出窗口 物品的名称*/
+
+.show-des {
+    cursor: pointer;
+    display: block;
+    width: 114px;
+    height: 20px;
+    z-index: 1;
+    position: relative;
+    left: 52px;
+    bottom: 51px;
+    color: black;
+}
+/*够买的格式*/
+.shop {
+    cursor: pointer;
+    border: 1px solid red;
+    z-index: 1;
+    color: red;
+    position: relative;
+    top: -71px;
+    right: -230px;
+}
+/*左侧导航栏的轮播图*/
+.lunboImg {
+    position: absolute;
+    left: 264px;
+    top: 160px;
+    width: 1060px;
+    height: 465px;
+}
+
+.lunboImg-img-current {
+    width: 1060px;
+    height: 465px;
+    display: block;
+}
+
+.lunboImg-img {
+    width: 1060px;
+    height: 465px;
+    display: none;
+}
+.lunbo-index {
+    cursor: pointer;
+    float: left;
+    top: -30px;
+    border-radius: 6px;
+    /* left: -12px; */
+    left: 910px;
+    position: relative;
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    background: gray;
+    margin-left: 10px;
+}
+.index-current {
+    background: white;
+}
+.leftlist{
+width: 230px;
+height: 170px;
+position: relative;
+left: 30px;
+top: 40px;
+}
+.leftlist ul li{
+    cursor: pointer;
+    font-size: 13px;
+    color: #ccc;
+    background: #5B5B5B;
+    width: 74px;
+    height: 82px;
+    position: relative;
+    float: left;
+    text-align: center;
+    left: 1px;
+    border: 1px solid gray;
+    list-style: none;
+    line-height: 82px;
+}
+.leftlist ul :hover{
+    box-shadow: 5px 5px 5px gray;
+}
+.rightlist{
+    position: relative;
+    width: 1065px;
+    height: 180px;
+    /*background: red;*/
+    left: 260px;
+    top: -130px;
+}
+.rightlist li{
+    float: left;
+    list-style: none;
+}
+.rightlist img{
+    margin-left: 25px;
+    width: 330px;
+    height: 170px;
+    cursor: pointer;
+}
+.rightlist img:hover{
+    box-shadow: 5px 5px 5px gray;
+}
+/*明星产品*/
+.star-pro{
+    width: 1295px;
+    height: 420px;
+    position: relative;
+    left: 30px;
+    top: -120px;
+    background: #ccc;
+    font-size: 0;
+    font-size: 0px;
+    overflow: hidden;
+}
+.star-pro-container{
+    height: 420px;
+    width: 2590px;
+}
+.star-pro-container li{
+    cursor: pointer;
+}
+h2{
+    font-size: 30px;
+}
+.star-pro img{
+    width: 160px;
+    height: 160px;
+    margin: 40px 35px 20px;
+}
+.star-pro li{
+    width: 230px;
+    height: 340px;
+    float: left;
+    margin-right: 29px;
+}
+.prebutton{
+    font-size: 25px;
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    left: 1230px;
+    border: 1px solid gray;
+    height: 30px;
+    top: -40px;
+    line-height: 30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.nextbutton{
+    cursor: pointer;
+    font-size: 25px;
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    left: 1230px;
+    border: 1px solid gray;
+    height: 30px;
+    top: -40px;
+    line-height: 30px;
+}
+.prebutton:hover{
+    color: orangered;
+    background: #6699CC;
+
+}
+.nextbutton:hover{
+    color: orangered;
+    background: #6699CC;
+}
+.star-des1{
+    width: 230px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+
+}
+.star-des2{
+    width: 230px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+
+    color: gray;
+}
+.star-des3{
+    margin-top: 20px;
+    width: 230px;
+    color: 	#FF5809;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+/*饰品*/
+.shipin{
+width: 1295px;
+height: 680px;
+position: relative;
+left: 30px;
+top: -70px;
+background: #f5f5f5;
+}
+.shipin-title{
+    font-size: 23px;
+}
+.left-shipin{
+    width: 230px;
+}
+.left-shipin img{
+    margin-top: 20px;
+}
+.shipin-nav li{
+    position: relative;
+    width: 83px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    top: -665px;
+    left: 963px;
+    list-style: none;
+}
+.shipin-pic{
+    /*background: pink;*/
+    width: 1045px;
+    height: 680px;
+    position: absolute;
+    top: 55px;
+    left: 250px;
+    display: none;
+}
+.shipin-li{
+    overflow: hidden;
+    margin-right: 19px;
+        margin-bottom: 15px;
+        float: left;
+        width: 242px;
+        height: 300px;
+        text-align: center;
+        list-style: none;
+        background: white;
+        position: relative;
+        cursor: pointer;
+}
+.shipin-li:hover,.lastlabel2:hover{
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 8px gray;
+}
+.shipin-li img{
+    margin-top: 25px;
+    width: 150px;
+    height: 150px;
+}
+.shipindes1{
+    font-size: 14px;
+    margin-top: 5px;
+}
+p.shipindes2 {
+    color: orangered;
+    font-size: 14px;
+    margin-top: 15px;
+}
+p.shipindes3 {
+    margin-top: 10px;
+    font-size: 10px;
+    color: gray;
+}
+.lastimg{
+    margin-top: 30px;
+    margin-right: -100px;
+}
+.lastlabel1 {
+    height: 140px;
+}
+.pointshow{
+    background: orangered;
+    height: 80px;
+    width: 242px;
+    position: relative;
+    display: block;
+    top: 37px;
+
+}
+.evl{
+    position: relative;
+        top: 6px;
+        font-size: 13px;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+.sourcefrom{
+    position: relative;
+    font-size: 13px;
+    color: lightgray;
+    top: 10px;
+}
+.lastlabel1 img{
+    height: 80px;
+    width: 80px;
+}
+.smalllabel{
+    position: absolute;
+    top: 0px;
+    font-size: 14px;
+    width: 60px;
+    height: 20px;
+    color: white;
+    background: orangered;
+    left: 90px;
+    display: block;
+}
+.newpro{
+    background: green;
+}
+.present{
+    background: blue;
+}
+.lastdes1 {
+    position: relative;
+    top: -70px;
+    left: -40px;
+}
+.lastdes2 {
+    position: relative;
+    top: -83px;
+    left: -35px;
+}
+.lastlabel2 {
+    cursor: pointer;
+    width: 243px;
+    height: 145px;
+    background: green;
+    position: relative;
+    top: -153px;
+    left: 1034px;
+    background: white;
+    list-style: none;
+}
+.lastlabel2 img{
+    position: absolute;
+    left: 162px;
+    top: 33px;
+}
+.lookmore{
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    width: 115px;
+}
+.hot-pro{
+    position: absolute;
+    top: 70px;
+    left: 95px;
+    font-size: 15px;
+    color: gray;
+}
+.shipin-nav li{
+    cursor: pointer;
+}
+li.nav1 {
+    width: 32px;
+    position: relative;
+    left: 1038px;
+}
+li.nav2 {
+    position: relative;
+    left: 1046px;
+    width: 67px;
+}
+li.nav3{
+    position: relative;
+    left: 1053px;
+    width: 34px;
+}
+li.nav4 {
+    position: relative;
+    left: 1060px;
+    width: 84px;
+}
+.shipi-nav-current{
+    border-bottom: 2px solid orangered;
+    color: orangered;
+}
+/*内容 css设置*/
+.contents{
+    position: relative;
+        background: #f5f5f5;
+        width: 1295px;
+        height: 500px;
+        left: 30px;
+}
+.contents h2{
+    position: relative;
+    left: -215px;
+}
+.contentli:hover{
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 8px grey;
+}
+/*每个小分区*/
+.contentli{
+    overflow: hidden;
+    background: white;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 30px;
+    height: 400px;
+    width: 303px;
+    position: relative;
+    float: left;
+    list-style: none;
+}
+
+.lititle{
+    position: relative;
+    font-size: 18px;
+    color: orangered;
+    top: 70px;
+}
+/*移动的内容*/
+.movedivContainer{
+    overflow: hidden;
+    width: 1300px;
+    height: 360px;
+    margin-left: -303px;
+}
+.movediv{
+    width: 303px;
+    height: 360px;
+    float: left;
+    background: white;
+}
+
+.movediv img{
+    width: 216px;
+    height: 154px;
+    position: relative;
+    top: 87px;
+}
+.contentname {
+    position: relative;
+    font-size: 20px;
+    top: 75px;
+    height: 23px;
+}
+.contentdes {
+    font-size: 14px;
+        color: #3c3c3c;
+        position: relative;
+        top: 80px;
+        height: 40px;
+}
+.sales{
+    height: 32px;
+    position: relative;
+    top: 85px;
+    width: 304px;
+
+}
+.movelink{
+    width: 122px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: orangered;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*向前向后移动*/
+.contentpre{
+    width: 20px;
+    position: relative;
+    height: 45px;
+    font-size: 30px;
+    top: -50%;
+    transform: translateY(-50%);
+    background: gray;
+    line-height: 45px;
+    cursor: pointer;
+    display: none;
+}
+.contentnext{
+
+    cursor: pointer;
+        width: 20px;
+        position: relative;
+        height: 45px;
+        font-size: 30px;
+        top: -237px;
+        transform: translateY(-50%);
+        background: gray;
+        line-height: 45px;
+        left: 283px;
+        display: none;
+}
+.contentindex{
+    text-align: center;
+width: 303px;
+height: 20px;
+/* position: relative; */
+position: absolute;
+top: 364px;
+left: 50%;
+transform: translateX(-50%);
+}
+.indexlabel{
+    list-style: none;
+        width: 8px;
+        height: 8px;
+        background: gray;
+        /* border: 3px solid orangered; */
+        display: inline-block;
+        margin-right: 25px;
+        border-radius: 10px;
+        cursor: pointer;
+
+}
+.currentlabel{
+    background: white;
+    list-style: none;
+    width: 6px;
+    height: 6px;
+    border: 3px solid orangered;
+    display: inline-block;
+    margin-right: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/*footSerivce 的css*/
+.footService{
+    text-align: center;
+        width: 1345px;
+        height: 100px;
+
+}
+.footService li{
+    margin-top: 20px;
+    width: 245px;
+    height: 25px;
+    border-right: 1px solid gray;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+color: #616161;
+
+}
+.footService ul{
+    width: 1270px;
+height: 65px;
+border-bottom: 1px solid #616161;
+}
+.footlinks{
+    width: 1270px;
+    height: 175px;
+}
+.foottitles {
+    font-size: 0px;
+    margin-right: -8px;
+    display: inline-block;
+}
+.foottitles li{
+    cursor: pointer;
+        /* background: red; */
+        list-style: none;
+        width: 60px;
+        position: relative;
+        margin-bottom: 20px;
+        left: 60px;
+        font-size: 14px;
+        margin-right: 100px;
+        color: gray;
+}
+.foottitles li:hover{
+    color: orangered;
+}
+li.footitem{
+    margin-bottom: 40px;
+    color: black;
+}
+.contact{
+    text-align: center;
+ width: 280px;
+ height: 120px;
+ float: right;
+}
+.contactPhone{
+    font-size: 22px;
+    color: #ff6700;
+}
+.contactTime{
+    font-size: 12px;
+    color: #666;
+}
+.contactInf{
+    cursor: pointer;
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    position: relative;
+    left: 85px;
+    border: 1px solid #f25807;
+    margin-top: 15px;
+    text-align: center;
+    color: #f25807;
+}
+.contactInf:hover{
+    background: #f25807;
+    color: #fff;
+    border-color: #f25807;
+}
+.siteInfo{
+    height: 165px;
+    width: 1325px;
+    background: #f5f5f5;
+}
+.siteLi{
+    padding: 0 5px;
+        font-size: 12px;
+        display: inline-block;
+        position: relative;
+        left: 130px;
+        top: -28px;
+        border-right: 1px solid #b0b0b0;
+        line-height: 13px;
+}
+.bottomlogo{
+    position: relative;
+    left: 65px;
+    top: 30px;
+}
+.siteUl{
+    font-size: 0px;
+}
+.siteInfo p{
+    line-height: 18px;
+        font-size: 12px;
+        color: #b0b0b0;
+        position: relative;
+        left: 130px;
+        top: -24px;
+}
+.bottomimg{
+    height: 28px;
+    width: 85px;
+    position: relative;
+    left: 950px;
+    top: -63px;
+}
+.borderdisappear{
+    border-right: none;
+}
